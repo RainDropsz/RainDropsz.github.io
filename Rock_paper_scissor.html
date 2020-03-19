@@ -1,0 +1,150 @@
+<!--
+Rock Paper Scissors
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <title> Rock, Paper, Scissor </title>
+
+  <style>
+    body {text-align: center; width:98%;height:80vh; 
+          background-color: #fafaff;}
+    h1 {color: #279eff; text-shadow: -3px 2px #ffcc44; 
+        margin: 8vh;}
+    #score {height:15vh; width: 50%; margin: 5vh auto; 
+            min-width: 200px;
+            border: 2px solid #279eff; 
+            box-shadow: -3px 2px #ffcc44;}
+    table {width: 100%; border-collapse: collapse; 
+           margin:0; padding:0; height:100%; }
+    th, td {border: 1px solid #6699aa; }
+    th {height: 3vh;}
+    td {width: 33%; height: 10vh; font-size:2em;}
+    #wlab, #wct {color: #00aa00;}
+    #tlab, #tct {color: #ccaa00;}
+    #llab, #lct {color: #cc0000;}
+
+    form {margin: 5vh auto;}
+    #rps {width: 10%; margin: 2vh 0; min-width: 60px;}
+    #rps, #rps:focus  {color: #669999; 
+                       outline: solid #ffcc44; }
+    #sb1 {color: #ffcc44;
+          background-color: #66aabb;}
+    #sb1:focus {outline: none;}
+    #gametxt {width: 50%; height:20vh; 
+              min-height: 50px; min-width: 220px;
+              border: 1px solid #279999; color:#275555;
+              margin: auto; 
+              overflow-y: scroll; overflow-x: hidden;}
+  </style>
+
+  
+</head>
+<body>
+
+<h1> Rock Paper Scissor </h1>
+
+<div id="score">
+  <table>
+    <tr>
+      <th id="wlab"> Win  </th>
+      <th id="tlab"> Tie  </th>
+      <th id="llab"> Lose </th>
+    </tr>
+    <tr> 
+      <td id="wct"> 0 </td>
+      <td id="tct"> 0 </td>
+      <td id="lct"> 0 </td>
+    </tr>
+  </table>
+</div>
+
+<form id="chooserps" onsubmit="test()">
+  <label for="rps">Choose rock, paper, or scissor:</label><br>
+  <input type="text" id="rps" name="rps" value="rock" autofocus>
+  <input id="sb1" type="submit" value="Shoot!">
+</form>
+
+<div id="gametxt">
+</div>
+
+<script> 
+
+//prevent reload page on form submit
+$("#chooserps").submit(function(e) {
+    e.preventDefault();
+});
+
+//scroll to bottom of #gametxt div
+function test() {
+  $("#gametxt").append(game());
+  $("#gametxt").scrollTop($("#gametxt")[0].scrollHeight);
+ 
+}
+
+var wct = 0;
+var lct = 0;
+var tct = 0;
+
+// computerPlay randomly returns Rock, Paper, or Scissors.
+function computerPlay() {
+  var rand1 = Math.floor(3*Math.random());
+  
+  if      (rand1 == 0) { $("#gametxt").append("Computer chooses Rock! <br>");    return "ROCK";      }
+  else if (rand1 == 1) { $("#gametxt").append("Computer chooses Paper! <br>");   return "PAPER";     }
+  else if (rand1 == 2) { $("#gametxt").append("Computer chooses Scissor!  <br>"); return "SCISSOR";   }
+  else                 { return "computerPlay random number error! ";  }
+}
+
+// plays a single round of Rock Paper Scissors. Case insensitive.
+function playRound(playerSelection, computerSelection) {
+  var str1 = playerSelection.toUpperCase();  
+  var str2 = computerSelection;  
+
+  if (str1 == "ROCK") {
+    if (str2 == "ROCK") { tct++; $("#tct").text(tct); return "It's a tie!"; }
+    else if (str2 == "PAPER") { lct++; $("#lct").text(lct); return "You lose!";}    
+    else if (str2 == "SCISSOR") { wct++; $("#wct").text(wct); return "You win!";}
+    else {return "playRound Error";}}
+  else if (str1 == "PAPER") {
+    if (str2 == "ROCK") { lct++; $("#lct").text(lct); return "You lose!"; }
+    else if (str2 == "PAPER") {  tct++; $("#tct").text(tct); return "It's a tie!";}
+    else if (str2 == "SCISSOR") {wct++; $("#wct").text(wct); return "You win!";}
+    else {return "playRound Error";}}
+  else if (str1 == "SCISSOR") {
+    if (str2 == "ROCK") { lct++; $("#lct").text(lct); return "You lose!"; }
+    else if (str2 == "PAPER") {wct++; $("#wct").text(wct); return "You win!";}
+    else if (str2 == "SCISSOR") { tct++; $("#tct").text(tct); return "It's a tie!";}
+    else {return "playRound Error";}}
+  else {return "playRound Error";}
+}
+
+function game() {
+//  var str1 = prompt("Please choose Rock, Paper, or Scissor");
+  
+  var str1 = $("#rps").val();
+  $("#gametxt").append("<br><br>");
+  
+  if ( str1.toUpperCase() == "ROCK"  || 
+       str1.toUpperCase() == "PAPER" ||
+       str1.toUpperCase() == "SCISSOR" ) {
+    $("#gametxt").append("You chose " + str1 + "!<br>");
+    return playRound(str1, computerPlay());
+  }
+  else {
+    return "Invalid choice";
+  }
+
+}
+
+
+</script>
+
+
+</body>
+</html>
