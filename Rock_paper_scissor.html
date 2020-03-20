@@ -20,32 +20,46 @@ https://raindropsz.github.io/Rock_paper_scissor.html
 
   <style>
     body {text-align: center; width:98%;height:80vh; 
-          background-color: #fafaff;}
-    h1 {color: #279eff; text-shadow: -3px 2px #ffcc44; 
-        margin: 8vh;}
+          background-color: #fffef0; font-size: 100%;}
+    h1 {color: #279eff; 
+        /*text-shadow: -3px 2px #ffcc44;*/ 
+        text-shadow: -.3vh 0 #ffcc44, 0 .3vh #ffcc44, 
+                      .3vh 0 #ffcc44, 0 -.3vh #ffcc44;
+        margin: 8vh; font-size: 4vh;}
     #score {height:15vh; width: 50%; margin: 5vh auto; 
             min-width: 200px;
-            border: 2px solid #279eff; 
-            box-shadow: -3px 2px #ffcc44;}
+            border: .5vw solid #279eff; 
+            outline: .7vw solid #ffcc44;
+            /*box-shadow: -.5vw .5vw #ffcc44;*/}
     table {width: 100%; border-collapse: collapse; 
            margin:0; padding:0; height:100%; }
-    th, td {border: 1px solid #6699aa; }
-    th {height: 3vh;}
-    td {width: 33%; height: 10vh; font-size:2em;}
+    th, td {border: .2vw solid #6699aa; }
+    th {height: 3vh; font-size: 2vh;}
+    td {width: 33%; height: 10vh; font-size: 5vh;}
     #wlab, #wct {color: #00aa00;}
     #tlab, #tct {color: #ccaa00;}
     #llab, #lct {color: #cc0000;}
 
+
     form {margin: 5vh auto;}
-    #rps {width: 10%; margin: 2vh 0; min-width: 60px;}
+    input {display: inline-block;}
+    label {font-size: 2.5vh; color:#4488cc;}
+    #rps {width: 10%; margin: 2vh 3vw;
+          height: 3vh; font-size: 2vh; width: 13vw;}
     #rps, #rps:focus  {color: #669999; 
                        outline: solid #ffcc44; }
     #sb1 {color: #ffcc44;
-          background-color: #66aabb;}
+          background-color: #66aabb;
+          height: 3.2vh; width: 13vw;
+          font-size: 1.5vh;}
     #sb1:focus {outline: none;}
+
+
     #gametxt {width: 50%; height:20vh; 
               min-height: 50px; min-width: 220px;
-              border: 1px solid #279999; color:#275555;
+              font-size: 2vh;
+              border: .2vw solid #4488cc;     
+              color:#4488cc;
               margin: auto; 
               overflow-y: scroll; overflow-x: hidden;}
   </style>
@@ -72,7 +86,7 @@ https://raindropsz.github.io/Rock_paper_scissor.html
 </div>
 
 <form id="chooserps" onsubmit="test()">
-  <label for="rps">Choose rock, paper, or scissor:</label><br>
+  <label for="rps">Choose rock, paper, or scissor</label><br>
   <input type="text" id="rps" name="rps" value="rock" autofocus>
   <input id="sb1" type="submit" value="Shoot!">
 </form>
