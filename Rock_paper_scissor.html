@@ -1,5 +1,12 @@
 <!--
 Rock Paper Scissors
+
+- [RainDropsz's  Solution](https://github.com/RainDropsz/rock_paper_scissors)[View in Browser](https://raindropsz.github.io/Rock_paper_scissor.html)
+
+https://github.com/RainDropsz/rock_paper_scissors
+
+https://raindropsz.github.io/Rock_paper_scissor.html
+
 -->
 
 <!DOCTYPE html>
@@ -112,9 +119,9 @@ function playRound(playerSelection, computerSelection) {
     else if (str2 == "SCISSOR") { wct++; $("#wct").text(wct); return "You win!";}
     else {return "playRound Error";}}
   else if (str1 == "PAPER") {
-    if (str2 == "ROCK") { lct++; $("#lct").text(lct); return "You lose!"; }
+    if (str2 == "SCISSOR") { lct++; $("#lct").text(lct); return "You lose!"; }
     else if (str2 == "PAPER") {  tct++; $("#tct").text(tct); return "It's a tie!";}
-    else if (str2 == "SCISSOR") {wct++; $("#wct").text(wct); return "You win!";}
+    else if (str2 == "ROCK") {wct++; $("#wct").text(wct); return "You win!";}
     else {return "playRound Error";}}
   else if (str1 == "SCISSOR") {
     if (str2 == "ROCK") { lct++; $("#lct").text(lct); return "You lose!"; }
