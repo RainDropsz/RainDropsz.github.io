@@ -26,7 +26,10 @@ https://raindropsz.github.io/Rock_paper_scissor.html
         text-shadow: -.3vh 0 #ffcc44, 0 .3vh #ffcc44, 
                       .3vh 0 #ffcc44, 0 -.3vh #ffcc44;
         margin: 8vh; font-size: 4vh;}
-    #score {height:15vh; width: 50%; margin: 5vh auto; 
+
+    * {margin: 0; padding: 0;}
+
+    #score {height:15vh; width: 50%; margin: 0 auto; 
             min-width: 200px;
             border: .5vw solid #279eff; 
             outline: .7vw solid #ffcc44;
@@ -54,6 +57,10 @@ https://raindropsz.github.io/Rock_paper_scissor.html
           font-size: 1.5vh;}
     #sb1:focus {outline: none;}
 
+
+    #rock, #paper, #scissor
+         {width: ; height: 10vh; border: solid;
+          margin: 5vh 2%;}
 
     #gametxt {width: 50%; height:20vh; 
               min-height: 50px; min-width: 220px;
@@ -85,16 +92,34 @@ https://raindropsz.github.io/Rock_paper_scissor.html
   </table>
 </div>
 
+<!--
 <form id="chooserps" onsubmit="test()">
   <label for="rps">Choose rock, paper, or scissor</label><br>
   <input type="text" id="rps" name="rps" value="rock" autofocus>
   <input id="sb1" type="submit" value="Shoot!">
 </form>
+-->
+
+<img id="rock" src="rock.png"/>
+<img id="paper" src="paper.png" />
+<img id="scissor" src="scissor.png"/>
+
+
 
 <div id="gametxt">
 </div>
 
 <script> 
+var wct = 0;
+var lct = 0;
+var tct = 0;
+var str1 = "";
+
+
+//$("#rock").on("click", () => {alert("stuff");});
+$("#rock").on("click", () => rock());
+$("#paper").on("click", () => paper());
+$("#scissor").on("click", () => scissor());
 
 //prevent reload page on form submit
 $("#chooserps").submit(function(e) {
@@ -102,15 +127,23 @@ $("#chooserps").submit(function(e) {
 });
 
 //scroll to bottom of #gametxt div
-function test() {
+function rock() {
+  str1="ROCK";
   $("#gametxt").append(game());
   $("#gametxt").scrollTop($("#gametxt")[0].scrollHeight);
- 
 }
 
-var wct = 0;
-var lct = 0;
-var tct = 0;
+function scissor() {
+  str1="SCISSOR";
+  $("#gametxt").append(game());
+  $("#gametxt").scrollTop($("#gametxt")[0].scrollHeight);
+}
+
+function paper() {
+  str1="PAPER";
+  $("#gametxt").append(game());
+  $("#gametxt").scrollTop($("#gametxt")[0].scrollHeight);
+}
 
 // computerPlay randomly returns Rock, Paper, or Scissors.
 function computerPlay() {
@@ -148,7 +181,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 //  var str1 = prompt("Please choose Rock, Paper, or Scissor");
   
-  var str1 = $("#rps").val();
+
   $("#gametxt").append("<br><br>");
   
   if ( str1.toUpperCase() == "ROCK"  || 
