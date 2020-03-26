@@ -1,0 +1,13 @@
+* {margin: 0; padding: 0;}
+body, html {width: 100%;}
+#grid1  {text-align: center; margin: 0; padding: 0;}
+.boxTp1 {display: inline-block; 
+         border: 1px solid #cccccc;} 
+.boxTp1, #grid1, .gridrow {font-size: 0;}
+
+/*
+#test {overflow-x: hidden; overflow-x: scroll; 
+       width: 50%; height:20vh; border: solid;
+       min-height: 50px; min-width: 220px;
+       word-wrap: break-word;}
+*/
