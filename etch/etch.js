@@ -1,13 +1,15 @@
 //Draw Grid
 //Number of boxes wide and high
-const nwide = 16;
-const nhght = 16;
-
+var nwide = 16, nhght = 16;
+var pctwide, pcthght;
 var i =0, j = 0;
 
+buildGrid(16,16);
 
+function buildGrid(nwide, nhght) {
+$("#grid1").detach();
 //Add div #grid1 as grid container
-$("body").prepend('<div id="grid1"></div>');
+$("body").append('<div id="grid1"></div>');
 
 
 for(i=1;i<=nhght;i++) {
@@ -17,18 +19,29 @@ for(i=1;i<=nhght;i++) {
   //div .boxTp1 is each box in the row
   for(j=1;j<=nwide;j++) {
     $(".gridrow:last-child").
-    append("<div class='boxTp1'></div>"); 
+    append("<div class='boxTp1'>"+j+"</div>"); 
   } 
 }
 
-
 //calculate Max width height for screen size
-var pctwide = (90 / nwide) + '%';
-var pcthght = (80 / nhght) + 'vh';
+pxwide = (.9*window.innerWidth / nwide -2) + 'px';
+pxhght = (.9*window.innerHeight / nhght -2) + 'px';
 
-$(".boxTp1").css("width",  pctwide);
-$(".boxTp1").css("height", pcthght);
+$(".boxTp1").css("width",  pxwide);
+$(".boxTp1").css("height", pxhght);
 
+//alert(pctwide + " " + window.innerHeight + " " + pcthght);
+}
+
+//when clrbtn clicked, clear grid & buildGrid
+$("#clrbtn").submit( function() {
+    buildGrid($("#gWid").val(), $("#gHgt").val());
+  }
+);
+
+//prevent reload page on form submit
+$("#clrbtn").submit(function(e) { 
+  e.preventDefault(); } );
 
 
 //Hover effect

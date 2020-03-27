@@ -1,9 +1,20 @@
 * {margin: 0; padding: 0;}
-body, html {width: 100%;}
-#grid1  {text-align: center; margin: 0; padding: 0;}
-.boxTp1 {display: inline-block; 
+#grid1  {text-align: center;}
+.boxTp1 {display: inline-block;
          border: 1px solid #cccccc;} 
 .boxTp1, #grid1, .gridrow {font-size: 0;}
+input {vertical-align: middle; width: 2vw;}
+#forms, input {font-size: 1vh; }
+
+#mkGrd {margin: 0 1vh;}
+
+
+input {width: 10%;}
+input[type=number] {width: 10%; margin: 0 2%;}
+input[type=submit] {}
+
+
+
 
 /*
 #test {overflow-x: hidden; overflow-x: scroll; 
