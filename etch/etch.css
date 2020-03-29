@@ -1,24 +1,44 @@
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; border: ; }
 #grid1  {text-align: center;}
 .boxTp1 {display: inline-block;
-         border: 1px solid #cccccc;} 
+         border: 1px solid #eeeeee;} 
 .boxTp1, #grid1, .gridrow {font-size: 0;}
+
+
+.left  {float: left;  }
+.right {float: right; }
+
+section {height: 3vh; margin: 1vh 1%;}
+
 input {vertical-align: middle; width: 2vw;}
-#forms, input {font-size: 1vh; }
 
-#mkGrd {margin: 0 1vh;}
+form, input, label 
+    {display: inline-block; font-size: 1.5vh;
+     white-space: nowrap;}
+
+input[type=number] {width: 15px; margin: 0 1%;
+ display: inline-block;}
+input[type=submit] {width: 20px; height: ; 
+                    margin: 0; display: inline-block;}
+
+input[type=text] {min-width: 48px; margin: 0 2%;}
+
+#lblcolor {width: 2vh; height: 2vh;
+           vertical-align: middle; 
+           display: inline-block;
+           background-color: #ccfcff;
+           border: solid; margin: 0; padding: 0;}
+input[type=color] {width: 100%; height: 100%; 
+           margin: -1px -1px; display: none;}
+
+img {width: 2vh; height: 2vh; margin: 0 2%; 
+     border: 1px solid; vertical-align: middle;
+     display: inline-block;}
+
+#gradbtn {width: 2vh; height: 2vh; margin: 0 2% 0 -1% ;
+     border: 1px solid; vertical-align: middle;
+     display: inline-block;
+     background-image: linear-gradient(
+                       to right, white , black)}
 
 
-input {width: 10%;}
-input[type=number] {width: 10%; margin: 0 2%;}
-input[type=submit] {}
-
-
-
-
-/*
-#test {overflow-x: hidden; overflow-x: scroll; 
-       width: 50%; height:20vh; border: solid;
-       min-height: 50px; min-width: 220px;
-       word-wrap: break-word;}
-*/

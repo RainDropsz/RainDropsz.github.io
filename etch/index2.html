@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+  <title>Etch-a-Sketch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="etch.css">
+
+  <!--Include jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<section id="forms">
+  
+  <form id="mkGrd" class="left">
+    <label for="pxlWid">
+      Width:
+    </label>
+    <input type="number" min="1" step ="1"
+     name="pxlWid" value="16" id="gWid">
+
+    <label for="pxlHgt">
+      Height:
+    </label>
+    <input type="number" min="1" step ="1"
+     name="pxlHgt" value="16" id="gHgt">
+
+    <input type="submit" value="Go">
+  </form>
+  
+  <div id="gradbtn" class="right"></div>
+
+  <img src="rainbow.png" id="rainbowbtn" class="right"></img>
+
+ 
+  <form id="#color1" class="right">
+    <label for="color">Color:</label>
+    <input type="text" value="#ccfcff" name="color"
+             id="colorText">
+    <label id="lblcolor">
+      <input type="color" value="#ccfcff" 
+             id="colorChoice">
+    </label>
+    
+  </form>
+
+</section>
+
+
+  <script src="etch.js"></script>
+</body>
+
+
+</html>
