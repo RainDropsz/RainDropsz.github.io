@@ -54,8 +54,9 @@ img {width: 3vh; height: 3vh;
 
 .btn {width: 3vh; height: 3vh; margin: 0 1%;
      border: 1px solid; 
-     display: inline-block;
-     background-image: linear-gradient(
+     display: inline-block;}
+
+#gradbtn  {background-image: linear-gradient(
                        to right, white , black)}
 
 img:hover, #gradbtn:hover, #lblcolor:hover {border: 2px solid black;}

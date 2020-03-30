@@ -1,5 +1,5 @@
 var nwide = 16, nhght = 16;
-var pctwide, pcthght;
+var pctwide, pcthght, pxwide, pxhght;
 var i = 0, j = 0;
 var color1 = $("#colorChoice").val();
 var colorText = $("#colorText").val();
@@ -28,19 +28,22 @@ function buildGrid(nwide, nhght) {
     } 
   }
          //fit boxes to screen
-  addboxcss();
+  addboxcss(nwide, nhght);
          //attach event listener to new grid 
   $(".boxTp1").mouseover(() => colorMode(event))  ;
 
 }        //end of function buildGrd
 
-function addboxcss() {
+function addboxcss(nwide, nhght) {
        //calculate Max width height for screen size
-  pxwide = (.9*window.innerWidth / nwide -2) + 'px';
-  pxhght = (.9*window.innerHeight / nhght -2) + 'px';
-  
-  $(".boxTp1").css("width",  pxwide);
-  $(".boxTp1").css("height", pxhght);
+  pxwide = (.9*window.innerWidth / nwide -2) ;
+  pxhght = (.8*window.innerHeight / nhght -2) ;
+
+  pctwide = pxwide /  window.innerWidth * 100 + "%";
+  pcthght = pxhght /  window.innerHeight * 100 + "vh";
+
+  $(".boxTp1").css("width",  pctwide);
+  $(".boxTp1").css("height", pcthght);
 }
 
 //Function for changing box colors
@@ -57,7 +60,7 @@ function colorMode(e) {
     str0 = $(e.target).css("background-color");
     numStart = (str0.lastIndexOf(",") + 1);
     curropc = (str0.slice(numStart));
-    newopc = parseFloat(curropc) + 0.2;
+    newopc = parseFloat(curropc) + 0.1;
     rgba = str0.slice(0, numStart) + newopc + ")";
     $(e.target).css("background-color", rgba);   
 
@@ -77,9 +80,8 @@ $("#mkGrd").submit( function() {
 //$(".boxTp1").mouseover(() => colorMode(event))  ;
 
 //Event Listeners: color input, change label color
-$("#colorChoice").on("input", 
+$("#colorChoice").on("change", 
   function() {
-    alert(mode);
     mode = 0;
     color1 = $("#colorChoice").val();
     $("#lblcolor").css("background-color", color1);  
