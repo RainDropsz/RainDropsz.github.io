@@ -54,14 +54,14 @@ function colorMode(e) {
     applyRandColor();
     $(e.target).css("background-color", color1);}
   else if (mode == 2) {
-    
     str0 = $(e.target).css("background-color");
     numStart = (str0.lastIndexOf(",") + 1);
     curropc = (str0.slice(numStart));
     newopc = parseFloat(curropc) + 0.2;
- 
     rgba = str0.slice(0, numStart) + newopc + ")";
     $(e.target).css("background-color", rgba);   
+
+
   }
 }
 
@@ -79,6 +79,7 @@ $("#mkGrd").submit( function() {
 //Event Listeners: color input, change label color
 $("#colorChoice").on("input", 
   function() {
+    alert(mode);
     mode = 0;
     color1 = $("#colorChoice").val();
     $("#lblcolor").css("background-color", color1);  
