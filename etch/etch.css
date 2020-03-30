@@ -59,4 +59,4 @@ img {width: 3vh; height: 3vh;
 #gradbtn  {background-image: linear-gradient(
                        to right, white , black)}
 
-img:hover, #gradbtn:hover, #lblcolor:hover {border: 2px solid black;}
+img:hover, #gradbtn:hover, #lblcolor:hover {opacity: 0.5;}
