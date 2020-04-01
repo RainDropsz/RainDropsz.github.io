@@ -1,7 +1,7 @@
 * {margin: 0; padding: 0;  }
 body {background-image: linear-gradient(to right, 
       #660000, black, #330099  );}
-header {font: italic bold 1em "Indie Flower"; text-align: center; color: #ffffff;}
+header {font: italic bold 3vh "Indie Flower"; text-align: center; color: #ffffff;}
 section {height: 3vh; margin: 0 1% 4vh 1%; line-height: 3vh;}
 
 #grid1  {text-align: center;}
@@ -65,4 +65,5 @@ img {width: 3vh; height: 3vh;
 
 img:hover, #gradbtn:hover, #lblcolor:hover {opacity: 0.5;}
 footer {position: absolute; bottom: 0; width:99%; text-align:center;
-        color: #cccccc; }
+        color: #cccccc; height: 3vh; }
+small {font-size: 2vh; padding: .5vh 0;}
