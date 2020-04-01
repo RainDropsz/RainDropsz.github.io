@@ -13,7 +13,7 @@ section {height: 3vh; margin: 0 1% 4vh 1%; line-height: 3vh;}
 .left  {float:left;  height: 3vw;}
 .right {float:right; height: 3vw;}
 
-input {width: 2vw;}
+input {width: 2vw; }
 
 .shiftup {position: relative; top:-1vh;}
 #colorform {margin: 0 2%;}
@@ -26,22 +26,10 @@ label {color: #cccccc;}
 input[type=number] {width: 20px; margin: 0 1%;
                     display: inline-block;}
 
-/* Chrome, Safari, Edge, Opera  hide arrows on number input*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox hide arrows on number input*/
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input[type=submit] {width: 30px; height: ; 
+input[type=submit] {min-width: 30px;
                     margin: 0; display: inline-block;}
 
-input[type=text] {min-width: 60px; margin: 2%; margin-top:-10px;}
+input[type=text] { margin: 2%; margin-top:-10vh; min-width:60px;}
 
 #lblcolor {width: 3vh; height: 3vh;
            display: inline-block;
@@ -67,3 +55,15 @@ img:hover, #gradbtn:hover, #lblcolor:hover {opacity: 0.5;}
 footer {position: absolute; bottom: 0; width:99%; text-align:center;
         color: #cccccc; }
 small {font-size: 2vh; padding: .5vh 0;}
+
+/* Chrome, Safari, Edge, Opera  hide arrows on number input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox hide arrows on number input*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
