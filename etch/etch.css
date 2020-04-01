@@ -4,7 +4,7 @@ body {background-image: linear-gradient(to right,
 header {font: italic bold 3vh "Indie Flower"; text-align: center; color: #ffffff;}
 section {height: 3vh; margin: 0 1% 4vh 1%; line-height: 3vh;}
 
-#grid1  {text-align: center;}
+#grid1  {text-align: center; margin: 0 0 3vh 0;}
 .boxTp1 {display: inline-block;
          border: 1px solid #eeeeee;} 
 .boxTp1, #grid1, .gridrow {font-size: 0;}
@@ -65,5 +65,5 @@ img {width: 3vh; height: 3vh;
 
 img:hover, #gradbtn:hover, #lblcolor:hover {opacity: 0.5;}
 footer {position: absolute; bottom: 0; width:99%; text-align:center;
-        color: #cccccc; height: 3vh; }
+        color: #cccccc; }
 small {font-size: 2vh; padding: .5vh 0;}
