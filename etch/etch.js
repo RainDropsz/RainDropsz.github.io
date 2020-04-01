@@ -1,12 +1,3 @@
-/*
-var nwide = 16, nhght = 16;
-var pctwide, pcthght, pxwide, pxhght;
-var i, j;
-var color1 = $("#colorChoice").val();
-var colorText = $("#colorText").val();
-var mode = 0;
-var opacity = 0.1;
-*/
          //Global Variables
 var mode = 0;
 var color1 = $("#colorChoice").val();
@@ -15,13 +6,11 @@ var colorText = $("#colorText").val();
 function buildGrid(nwide, nhght) {
   var i = 0, j = 0;
   var mode = 0;
-  var opacity = 0.1; 
 
           //Remove previous grid
   $("#grid1").remove();
           //Add div #grid1 as grid container
   $("body").append('<div id="grid1"></div>');
-
 
   for(i=1;i<=nhght;i++) {
           //div .gridrow is row container
@@ -37,7 +26,7 @@ function buildGrid(nwide, nhght) {
   addboxcss(nwide, nhght);
          //attach event listener to new grid
   $(".boxTp1").mouseover(() => colorMode(event))  ;
-
+  gradinit(); // initialize gradient
 }        //end of function buildGrd
 
 function addboxcss(nwide, nhght) {
@@ -55,7 +44,8 @@ function addboxcss(nwide, nhght) {
 function colorMode(e) {
          //Modes for changing box colors
   var str0 = "", opcStart = 0, curropc = "", newopc = 0, rgba = "";
-//  var color1 = $("#colorChoice").val();
+  const opacity = 0.2; 
+
 
   if (mode == 0) {
     $(e.target).css("background-color", color1);}
@@ -66,7 +56,7 @@ function colorMode(e) {
     str0 = $(e.target).css("background-color");
     opcStart = (str0.lastIndexOf(",") + 1);
     curropc = parseFloat(str0.slice(opcStart));
-    newopc = curropc + 0.1;
+    newopc = curropc + 0.2;
     rgba = str0.slice(0, opcStart) + newopc + ")";
 
     $(e.target).css("background-color", rgba);
@@ -89,7 +79,7 @@ $("#colorChoice").on("change",
   }
 );
 
-          //Enter key on colorText changes 
+          //Enter key on colorText changes
 $(window).keydown(
   function(event){                   //if press enter after
     if(event.keyCode == 13 &&        //typing in colorText
@@ -139,19 +129,17 @@ function gradinit() {
   );
 }
 
-function convToRBGA(tmprgb)  {
-  var commaPos = "-1";
-  
+function convToRBGA(tmprgb)  { 
+/*  
   if(tmprgb.search("rgba") < 0) {
     tmprgb = tmprgb.slice(0,3) + "a" +
       tmprgb.slice(3,tmprgb.length-1) + "," + 0 + ")";
   }
   else {
-    commaPos = tmprgb.lastIndexOf(",");
-    tmprgb = tmprgb.slice(0, commaPos+1) + " 0)";
+    tmprgb="rgba(0,0,0,0)";
   }
-
-  return tmprgb;
+*/
+  return "rgba(255,255,255,0)";
 }
 
          //prevent reload page on form submit
@@ -161,3 +149,5 @@ $("#mkGrd").submit(function(e) {
 
          // Build First Grid
 buildGrid(16,16);
+         // Add copyright year
+$("small").append("&copy;" + (new Date().getFullYear() ) + " RainDropsz");

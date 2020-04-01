@@ -1,4 +1,9 @@
 * {margin: 0; padding: 0;  }
+body {background-image: linear-gradient(to right, 
+      #660000, black, #330099  );}
+header {font: italic bold 1em "Indie Flower"; text-align: center; color: #ffffff;}
+section {height: 3vh; margin: 0 1% 4vh 1%; line-height: 3vh;}
+
 #grid1  {text-align: center;}
 .boxTp1 {display: inline-block;
          border: 1px solid #eeeeee;} 
@@ -8,8 +13,6 @@
 .left  {float:left;  height: 3vw;}
 .right {float:right; height: 3vw;}
 
-section {height: 3vh; margin: 3vh 1%; line-height: 3vh;}
-
 input {width: 2vw;}
 
 .shiftup {position: relative; top:-1vh;}
@@ -17,6 +20,7 @@ input {width: 2vw;}
 form, input, label 
     {display: inline-block; font-size: 2vh;
      white-space: nowrap;}
+label {color: #cccccc;}
 
 
 input[type=number] {width: 20px; margin: 0 1%;
@@ -41,7 +45,7 @@ input[type=text] {min-width: 60px; margin: 2%; margin-top:-10px;}
 
 #lblcolor {width: 3vh; height: 3vh;
            display: inline-block;
-           background-color: #ccfcff;
+           background-color: #aaddcc;
            border: 1px solid; margin: 0; padding: 0;}
 
 
@@ -57,6 +61,8 @@ img {width: 3vh; height: 3vh;
      display: inline-block;}
 
 #gradbtn  {background-image: linear-gradient(
-                       to right, white , black)}
+                       to right, gray, white)}
 
 img:hover, #gradbtn:hover, #lblcolor:hover {opacity: 0.5;}
+footer {position: absolute; bottom: 0; width:99%; text-align:center;
+        color: #cccccc; }

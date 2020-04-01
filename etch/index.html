@@ -6,6 +6,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+  <!--Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Indie Flower' rel='stylesheet'>
+
+  <!--My CSS-->
   <link rel="stylesheet" type="text/css" href="etch.css">
 
   <!--Include jQuery-->
@@ -14,6 +19,10 @@
 
 
 <body>
+<header>
+  <h1>Etch-a-Sketch</h1>
+</header>
+
 <section id="forms">
   <form id="mkGrd" class="left">
     <label for="pxlWid">
@@ -38,14 +47,18 @@
  
   <form id="colorform" class="right">
     <label for="color" class="shiftup">Color:</label>
-    <input type="text" class="shiftup" value="#ccfcff" name="color"
+    <input type="text" class="shiftup" value="#aaddcc" name="color"
              id="colorText">
     <label id="lblcolor">
-    <input type="color" value="#ccfcff" 
+    <input type="color" value="#aaddcc" 
            id="colorChoice">
     </label>
   </form>
 </section>
+
+<footer>
+  <small></small>
+</footer>
 
 
   <script src="etch.js"></script>
