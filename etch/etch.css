@@ -6,6 +6,7 @@ header {font: italic bold 3vh "Indie Flower";
 section {height: 3.5vh; box-sizing: border-box; font-size: 2vh;}
 
 #grid1  {text-align: center; display:block; margin-top: 2vh;}
+
 .boxTp1 {display: inline-block;
          border: 1px solid #663355;} 
 .boxTp1, #grid1, .gridrow {font-size: 0;}

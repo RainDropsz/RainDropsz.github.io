@@ -34,6 +34,7 @@ function addboxcss(nwide, nhght) {
   var pxwide = (.9*window.innerWidth / nwide -2) ;
   var pxhght = (.80*window.innerHeight / nhght -2) ;
 
+
   var pctwide = pxwide /  window.innerWidth * 100 + "%";
   var pcthght = pxhght /  window.innerHeight * 100 + "vh";
 
