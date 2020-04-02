@@ -1,6 +1,7 @@
 *    {margin: 0; padding: 0; border: 0; }
 body {background-image: linear-gradient(to right, 
       #330000, #000000, #000033  );}
+
 header {font: italic bold 3vh "Indie Flower"; 
         text-align: center; color: #ffffff; display:block; }
 section {height: 3.5vh; box-sizing: border-box; font-size: 2vh;}
@@ -18,7 +19,7 @@ form  {white-space: nowrap;}
 label {color: #cccccc;}
 input[type=number] {width: 20px; height: 3vh; margin: 0 1%; text-align: center; 
                     font-size: inherit;}
-input[type=submit] {padding: 0 2%; margin-left: 2%; font-size: inherit;}
+input[type=submit] {height: 3vh; padding: 0 2%; margin-left: 2%; font-size: inherit;}
 
 input[type=text] {width: 60px; height: 3vh; font-size: inherit; text-align: center;
            display: inline-block;}
