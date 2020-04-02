@@ -26,40 +26,42 @@
 <section id="forms">
   <form id="mkGrd" class="left">
     <label for="pxlWid">
-      Width:
+      Size:
     </label>
     <input type="number" min="1" step ="1"
      name="pxlWid" value="16" id="gWid">
 
     <label for="pxlHgt">
-      Height:
+      x
     </label>
     <input type="number" min="1" step ="1"
      name="pxlHgt" value="16" id="gHgt">
 
     <input type="submit" value="Go">
-  </form></li>
+  </form>
   
-  <div id="gradbtn" class="right btn"></div>
+  <div id="gradbtn" class="right"></div>
 
-  <div class="right btn"><img src="rainbow.png" id="rainbowbtn"></img></div>
+  <img src="rainbow.png" id="rainbowbtn" class="right"></img>
 
  
   <form id="colorform" class="right">
-    <label for="color" class="shiftup">Color:</label>
-    <input type="text" class="shiftup" value="#aaddcc" name="color"
-             id="colorText">
-    <label id="lblcolor">
-    <input type="color" value="#aaddcc" 
-           id="colorChoice">
+    <label for="color">Color:</label>
+    <input type="text" value="#aaddcc" name="color"
+           id="colorText">
+
+    <label id="lblcolor">&nbsp;
+        <input type="color" value="#aaddcc" 
+               id="colorChoice">
     </label>
   </form>
 </section>
 
+
+
 <footer>
   <small></small>
 </footer>
-
 
   <script src="etch.js"></script>
 </body>

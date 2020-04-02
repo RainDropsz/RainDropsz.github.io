@@ -10,7 +10,7 @@ function buildGrid(nwide, nhght) {
           //Remove previous grid
   $("#grid1").remove();
           //Add div #grid1 as grid container
-  $("body").append('<div id="grid1"></div>');
+  $("#forms").after('<div id="grid1"></div>');
 
   for(i=1;i<=nhght;i++) {
           //div .gridrow is row container
@@ -32,7 +32,7 @@ function buildGrid(nwide, nhght) {
 function addboxcss(nwide, nhght) {
          //calculate good percentages for screen size
   var pxwide = (.9*window.innerWidth / nwide -2) ;
-  var pxhght = (.8*window.innerHeight / nhght -2) ;
+  var pxhght = (.80*window.innerHeight / nhght -2) ;
 
   var pctwide = pxwide /  window.innerWidth * 100 + "%";
   var pcthght = pxhght /  window.innerHeight * 100 + "vh";
