@@ -32,7 +32,7 @@ function buildGrid(nwide, nhght) {
 function addboxcss(nwide, nhght) {
          //calculate good percentages for screen size
   var pxwide = (.9*window.innerWidth / nwide -2) ;
-  var pxhght = (.80*window.innerHeight / nhght -2) ;
+  var pxhght = (.68*window.innerHeight / nhght -2) ;
 
 
   var pctwide = pxwide /  window.innerWidth * 100 + "%";
