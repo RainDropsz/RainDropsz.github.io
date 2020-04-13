@@ -1,1 +1,0 @@
-Etch A Sketch project
