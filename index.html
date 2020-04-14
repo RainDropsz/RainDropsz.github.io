@@ -7,17 +7,18 @@
   <link href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
-
+  <script src="https://kit.fontawesome.com/5fbe5e3b5d.js" crossorigin="anonymous"></script>
 
   <style>
-    *         {margin: 0; padding: 0;}
+    *         {margin: 0; padding: 0; }
     html, body { background-color: #ccffff;}
-    header    {text-align: center; line-height: 1.2; padding: 4vh;}
-    h1        {font-family: "Cookie"; font-size: 8vh;
+    header    {text-align: center; line-height: 1.2; padding: 3vh;}
+    h1        {font-family: "Cookie"; font-size: 6vh;
                background: linear-gradient(to bottom, #ff00ff, #00ccff); 
                -webkit-background-clip: text; 
                -webkit-text-fill-color: transparent;}
-    h5        {font-family: "Roboto"; color: #668899;}
+    h5, h6        {font-family: "Roboto"; color: #668899;}
+    h6        {font-size: 2vh; margin:0; padding:0;}
     section   {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
     div       {text-align: center;}
     div:nth-child(2n+1) {background-color: #ddffff; }
@@ -25,6 +26,7 @@
     a         {color: inherit; text-decoration: none;}
     a:hover   {color: #00aaaa;}
     div:hover {background-color: #eeddff;}
+
     @media  (max-width: 768px) {
       div:nth-child(3n)   {background-color: #92e2e9; }
       div:nth-child(3n+1) {background-color: #b9e8f0; }
@@ -35,6 +37,12 @@
 
 </head>
 <body>
+  <section class="contact">
+    <h6 class="is-pulled-right"><a href="mailto:raindropsz100@gmail.com">
+        <i class="far fa-envelope"></i> Email me</a>
+    </h6>
+  </section>
+
   <header>
     <h1>RainDropsz' Projects</h1>
     <h5>following <a href="https://www.theodinproject.com/home">The Odin Project Curriculum</a></h5>
