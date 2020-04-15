@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href='https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
   <script src="https://kit.fontawesome.com/5fbe5e3b5d.js" crossorigin="anonymous"></script>
@@ -18,39 +17,39 @@
                -webkit-background-clip: text; 
                -webkit-text-fill-color: transparent;}
     h5, h6        {font-family: "Roboto"; color: #668899;}
-    h6        {font-size: 2vh; margin:0; padding:0;}
+    .contact        {font-size: 3vh; margin:0; padding:0; float:right;}
     section   {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
-    div       {text-align: center;}
-    div:nth-child(2n+1) {background-color: #ddffff; }
-    div:nth-child(2n)   {background-color: #cceeee; }
+    .mywork       {text-align: center; display: inline-block; width: 33%;}
+    .mywork:nth-child(2n+1) {background-color: #ddffff; }
+    .mywork:nth-child(2n)   {background-color: #cceeee; }
     a         {color: inherit; text-decoration: none;}
     a:hover   {color: #00aaaa;}
     div:hover {background-color: #eeddff;}
 
     @media  (max-width: 768px) {
-      div:nth-child(3n)   {background-color: #92e2e9; }
-      div:nth-child(3n+1) {background-color: #b9e8f0; }
-      div:nth-child(3n+2) {background-color: #a9d8fa; }
-      div:hover {background-color: #eeddff;}
+      .mywork {width: 50%;}
+      .mywork:nth-child(3n)   {background-color: #92e2e9; }
+      .mywork:nth-child(3n+1) {background-color: #b9e8f0; }
+      .mywork:nth-child(3n+2) {background-color: #a9d8fa; }
+      .mywork:hover {background-color: #eeddff;}
     }              
   </style>
 
 </head>
 <body>
   <section class="contact">
-    <h6 class="is-pulled-right"><a href="mailto:raindropsz100@gmail.com">
+    <h6><a href="mailto:raindropsz100@gmail.com">
         <i class="far fa-envelope"></i> Email me</a>
     </h6>
   </section>
 
-  <header>
+  <header class="title">
     <h1>RainDropsz' Projects</h1>
     <h5>following <a href="https://www.theodinproject.com/home">The Odin Project Curriculum</a></h5>
   </header>
 
-  <section class="columns is-mobile is-multiline">
-    <div class="column is-half-mobile is-one-third-tablet _
-                is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+  <section>
+    <div class="mywork">
       <a href="https://raindropsz.github.io/calculator/">
         <img src="sscalc.png" alt="calculator"></a><br>
       <a href="https://raindropsz.github.io/calculator/">
@@ -59,8 +58,7 @@
       <a href="https://github.com/RainDropsz/calculator">
         Github Code
       </a>
-    </div><div class="column is-half-mobile is-one-third-tablet _
-                is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+    </div><div class="mywork">
       <a href="https://raindropsz.github.io/etch/">
         <img src="ssetch.png" alt="etch-a-sketch"></a><br>
       <a href="https://raindropsz.github.io/etch/">
@@ -69,8 +67,7 @@
       <a href="https://github.com/RainDropsz/etch">
         Github Code
       </a>
-    </div><div class="column is-half-mobile is-one-third-tablet _
-                is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+    </div><div class="mywork">
       <a href="https://raindropsz.github.io/rps/">
         <img src="ssrps.png" alt="rock paper scissors"></a><br>
       <a href="https://raindropsz.github.io/rps/">
@@ -79,8 +76,7 @@
       <a href="https://github.com/RainDropsz/rps">
         Github Code
       </a>
-    </div><div class="column is-half-mobile is-one-third-tablet _
-                is-one-third-desktop is-one-quarter-widescreen is-one-quarter-fullhd">
+    </div><div class="mywork">
       <a href="https://raindropsz.github.io/google-homepage/">
         <img src="ssgoogle.png" alt="google lookalike"></a><br>
       <a href="https://raindropsz.github.io/google-homepage/">
