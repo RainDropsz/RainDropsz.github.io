@@ -1,6 +1,8 @@
 *          {margin: 0; padding: 0; }
 html, body {background-color: #eefec9;}
-header     {text-align: center; line-height: 1.2; padding: 3vh; background-color: #ffffcc;}
+header     {text-align: center; line-height: 1.2; padding: 3vh; 
+            background-color: #ffffcc; box-shadow: 0px 0px 2px #ffffcc; 
+            margin-bottom: 2vh;}
 h1         {font-family: "Cookie"; font-size: 6vh;
             background: linear-gradient(to bottom, #ff00ff, #00ccff); 
             -webkit-background-clip: text; 
