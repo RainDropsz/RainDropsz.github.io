@@ -1,37 +1,34 @@
-*          { margin: 0; padding: 0; }
-html, body { background-color: #ccffff;}
-header    {text-align: center; line-height: 1.2; padding: 3vh;}
+*          {margin: 0; padding: 0; }
+html, body {background-color: #eefec9;}
+header     {text-align: center; line-height: 1.2; padding: 3vh; background-color: #ffffcc;}
 h1         {font-family: "Cookie"; font-size: 6vh;
             background: linear-gradient(to bottom, #ff00ff, #00ccff); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent;}
-h5, h6     {font-family: "Roboto"; color: #668899; margin-bottom: 2px;}
+h5, h6     {font-family: "Roboto"; color: #6d6473; margin-bottom: 2px;}
+h5         {margin: 1vh 0;}
 .contact   {font-size: 3vh; margin:0; padding:0 2%; float:right;}
 section    {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
 .mywork    {text-align: center; display: inline-block; width: 33%; 
-            padding: 1vh 0;}
-.mywork:nth-child(2n+1) {background-color: #ddffff; }
-.mywork:nth-child(2n)   {background-color: #cceeee; }
+            padding: 1vh 0; 
+            box-sizing: border-box; 
+            border:   3px solid #c5eeee; 
+            border-radius: 50%;
+            background-color: #f0ffff; }
 
-img       {box-shadow: -1px 1px 3px #bbbbbb, 1px 1px 3px #bbbbbb;}
+img       {box-shadow: -1px 1px 3px #bbbbbb, 1px 1px 3px #bbbbbb;
+           margin-top: 2vh; margin-bottom: 1vh;  border-radius: 15%;}
+.mywork a {color: #6d6473; }
 a         {color: inherit; text-decoration: none;}
 a:hover   {color: #00aaaa;}
-.mywork:hover {background-color: #eeddff;}
+.mywork:hover {background-color: #eee0ff; }
 
 @media  (max-width: 650px) {
   img       {width: 90%; height: auto;}
   section   {padding: 0;}
   .mywork   {width: 50%;}
-  .mywork:nth-child(3n)   {background-color: #cae9f9; }
-  .mywork:nth-child(3n+1) {background-color: #b9e8f0; }
-  .mywork:nth-child(3n+2) {background-color: #cceeee; }
-  .mywork:hover {background-color: #eeddff;}
 }
 
 @media (min-width: 1200px) {
   .mywork {width: 25%;}
-  .mywork:nth-child(3n)   {background-color: #caf9f9; }
-  .mywork:nth-child(3n+1) {background-color: #b9e8f0; }
-  .mywork:nth-child(3n+2) {background-color: #cceeee; }
-  .mywork:hover {background-color: #eeddff;} 
 }
