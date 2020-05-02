@@ -1,16 +1,20 @@
 *          {margin: 0; padding: 0; }
 html, body {background-color: #eefec9;}
-header     {text-align: center; line-height: 1.2; padding: 3vh; 
+
+.contact   {font-size: 3vh; padding:0 2%;text-align: right; padding: 0vh 0;
+            background-color: #ffffcc;}
+.contact img {height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
+
+header     {text-align: center; line-height: 1.2; padding: 3vh;
             background-color: #ffffcc; box-shadow: 0px 0px 2px #ffffcc; 
             margin-bottom: 2vh;}
 h1         {font-family: "Cookie"; font-size: 6vh;
             background: linear-gradient(to bottom, #ff00ff, #00ccff); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent;}
-h5, h6     {font-family: "Roboto"; color: #6d6473; margin-bottom: 2px;}
+h5, h6     {font-family: "Roboto"; color: #6d6473;}
 section h5 {margin: 3vh 0;}
-.contact   {font-size: 3vh; margin:0; padding:0 2%; float:right;}
-.contact img {height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
+
 section    {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
 .mywork    {text-align: center; display: inline-block; width: 33%; 
             padding: 1vh 0; 
