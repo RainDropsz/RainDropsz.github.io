@@ -8,8 +8,9 @@ h1         {font-family: "Cookie"; font-size: 6vh;
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent;}
 h5, h6     {font-family: "Roboto"; color: #6d6473; margin-bottom: 2px;}
-h5         {margin: 1vh 0;}
+section h5 {margin: 3vh 0;}
 .contact   {font-size: 3vh; margin:0; padding:0 2%; float:right;}
+.contact img {height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
 section    {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
 .mywork    {text-align: center; display: inline-block; width: 33%; 
             padding: 1vh 0; 
@@ -18,7 +19,7 @@ section    {font-family: 'Roboto'; color: #668899; padding: 0 2%;}
             border-radius: 50%;
             background-color: #f0ffff; }
 
-img       {box-shadow: -1px 1px 3px #bbbbbb, 1px 1px 3px #bbbbbb;
+.mywork img {box-shadow: -1px 1px 3px #bbbbbb, 1px 1px 3px #bbbbbb;
            margin-top: 2vh; margin-bottom: 1vh;  border-radius: 15%;}
 .mywork a {color: #6d6473; }
 a         {color: inherit; text-decoration: none;}
