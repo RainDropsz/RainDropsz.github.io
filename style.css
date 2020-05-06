@@ -1,4 +1,4 @@
-*          {
+*   {
     margin: 0; padding: 0; }
 html, body {
     background-color: #eefec9; }
@@ -10,7 +10,7 @@ html, body {
 i   {
     margin-right: 4px; }
 a   { 
-    color: #555555;  }
+    color: #55aaaa; text-decoration:none; }
 header     {
     text-align: center; line-height: 1.2; padding: 3vh;
     background-color: #ffffcc; box-shadow: 0px 0px 2px #ffffcc; 
