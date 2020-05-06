@@ -2,17 +2,18 @@
     margin: 0; padding: 0; }
 
 .contact   {
+
     font-size: 2.5vh; text-align: right; padding-right: 5px;
-    background-color: #fff9c8;}
+    background-color: #ffffcc;}
 .contact img {
     height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
 i   {
     margin-right: 4px; }
-a   { 
-    color: #55aaaa; text-decoration:none; }
+a, a:visited   { 
+    color: #669999; text-decoration:none; }
 header     {
     text-align: center; line-height: 1.2; padding: 3vh;
-    background-color: #fff9c8; }
+    background-color: #ffffcc; }
 h1         {
     font-family: "Cookie"; font-size: 6vh;
     background: linear-gradient(to bottom, #ff00ff, #00ccff); 
@@ -26,9 +27,9 @@ section h5 {
 section    {
     font-family: 'Roboto'; color: #668899; padding: 0 2%;}
 section:nth-child(2n)    { 
-    background-color: #ecffdb; }
+    background-color: #eeffcc; }
 section:nth-child(2n+1)  { 
-    background-color: #eefec9; }
+    background-color: #e0ffc0; }
 .mywork    {
     text-align: center; display: inline-block; width: 33%; 
     padding: 1vh 0; 
@@ -44,7 +45,7 @@ section:nth-child(2n+1)  {
 .mywork a  {
     color: #555555; text-decoration:none;}
 .link_to_top  {
-    text-align:right; padding-right: 5%; background-color: #fff9c8;
+    text-align:right; padding-right: 5%; background-color: #ffffcc;
 }
 a:hover, .github:hover   {
     color: #00aaaa; }
