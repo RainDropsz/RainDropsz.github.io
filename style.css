@@ -1,10 +1,9 @@
 *   {
     margin: 0; padding: 0; }
-html, body {
-    background-color: #eefec9; }
+
 .contact   {
-    font-size: 2.5vh; padding:0 2%;text-align: right; padding-right: 5px;
-    background-color: #ffffcc;}
+    font-size: 2.5vh; text-align: right; padding-right: 5px;
+    background-color: #fff9c8;}
 .contact img {
     height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
 i   {
@@ -13,8 +12,7 @@ a   {
     color: #55aaaa; text-decoration:none; }
 header     {
     text-align: center; line-height: 1.2; padding: 3vh;
-    background-color: #ffffcc; box-shadow: 0px 0px 2px #ffffcc; 
-    margin-bottom: 2vh;}
+    background-color: #fff9c8; }
 h1         {
     font-family: "Cookie"; font-size: 6vh;
     background: linear-gradient(to bottom, #ff00ff, #00ccff); 
@@ -23,10 +21,14 @@ h1         {
 h5, h6     {
     font-family: "Roboto"; color: #6d6473;}
 section h5 {
-    margin: 3vh 5px;}
+    padding: 3vh 5px;}
 
 section    {
     font-family: 'Roboto'; color: #668899; padding: 0 2%;}
+section:nth-child(2n)    { 
+    background-color: #ecffdb; }
+section:nth-child(2n+1)  { 
+    background-color: #eefec9; }
 .mywork    {
     text-align: center; display: inline-block; width: 33%; 
     padding: 1vh 0; 
@@ -42,7 +44,7 @@ section    {
 .mywork a  {
     color: #555555; text-decoration:none;}
 .link_to_top  {
-    text-align:right; margin-right: 5%; 
+    text-align:right; padding-right: 5%; background-color: #fff9c8;
 }
 a:hover, .github:hover   {
     color: #00aaaa; }
