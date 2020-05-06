@@ -7,7 +7,10 @@ html, body {
     background-color: #ffffcc;}
 .contact img {
     height: 2.5vh; width: 2.5vh; margin-bottom: -.5vh;}
-
+i   {
+    margin-right: 4px; }
+a   { 
+    color: #555555;  }
 header     {
     text-align: center; line-height: 1.2; padding: 3vh;
     background-color: #ffffcc; box-shadow: 0px 0px 2px #ffffcc; 
@@ -28,17 +31,20 @@ section    {
     text-align: center; display: inline-block; width: 33%; 
     padding: 1vh 0; 
     box-sizing: border-box; 
-    border-radius: 50%;  }
+    border-radius: 80% 70% 40% 50%;  }
 .github   {
     color: #555555; display: inline-block; line-height:1.8;}
 .github img {
-    height: 2.5vh; width: 2.5vh; margin-bottom: -.3vh; }
+    height: 2.5vh; width: 2.5vh; margin-bottom: -.4vh; }
 .mywork .ss { 
     box-shadow: -1px 1px 3px #bbbbbb, 1px 1px 3px #bbbbbb;
     margin-top: 2vh; margin-bottom: 1vh;  border-radius: 15%;}
-.mywork a {
+.mywork a  {
     color: #555555; text-decoration:none;}
-.mywork a:hover, .github:hover   {
+.link_to_top  {
+    text-align:right; margin-right: 5%; 
+}
+a:hover, .github:hover   {
     color: #00aaaa; }
 .shake:hover { 
     animation: shake 3s;}
@@ -77,3 +83,4 @@ section    {
 @media (min-width: 1200px) {
   .mywork {width: 25%;}
 }
+
